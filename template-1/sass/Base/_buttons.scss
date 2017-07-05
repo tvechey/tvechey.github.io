@@ -1,0 +1,28 @@
+.btn {
+	border-radius: 1.7em;
+	padding: 0.8em 1em;
+	text-align: center;
+	text-transform: capitalize;
+	vertical-align: middle;	
+}
+
+.btn-demo,
+.btn-submit {
+	background: $primary-btn-background;
+	color: $primary-btn-color;
+}
+
+.btn-learn {
+	background: $secondary-background;
+	color: $gray-base;
+}
+
+.btn-contact {
+	background:$reverse-btn-background;
+	color:$primary-link-color;
+}
+
+.btn-contact {
+	background:$reverse-btn-background;
+	color:$primary-link-color;
+}

@@ -1,0 +1,58 @@
+.features {
+	@extend %sections;
+
+	background-color: $secondary-background;
+	
+	.f-item {
+		@include mq(992) {
+			float: left;
+			width: 33.3%;
+			padding: 0 1em 1.7em;
+
+			&:nth-child(4),
+			&:nth-child(5), 
+			&:nth-child(6) {
+				margin-bottom: 0;
+			}
+		}	
+	}
+}
+
+.f-item {
+	@extend %box-sizing;
+
+	clear: right;
+	padding-bottom: 1.7em;
+
+	@include clearfix;
+
+	&-content {
+		width: calc(100% - 4em);
+		float: right;
+	}
+
+	&-title {
+		margin-bottom: 1em;
+	}
+
+	&-text {
+		color: $secondary-text-color;
+		font-size: 0.8em;
+		margin-bottom: 2em;
+	}
+
+	&-btn {
+		font-size: 0.8em;
+
+		&-link {
+			color: $primary-text-color;
+			text-transform: capitalize;
+
+			& i {
+				vertical-align:text-bottom;
+				margin-left: 0.4em;
+			} 
+		}
+
+	}
+}

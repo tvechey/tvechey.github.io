@@ -1,0 +1,136 @@
+.p-home .recent-item {
+	@include mq(992) {
+		margin-bottom: 0;
+	}
+}
+.p-portfolio {
+	.recent-item-title {
+		margin: 0 0 1em;
+		font-size: 1.3em;
+	}
+
+	.details {
+		color: $primary-text-color;
+		opacity: 0.3;
+	}
+}
+
+.recent {
+	@extend %sections;
+	
+	&-top {
+		@include mq(992) {
+			position: relative;
+			height: 300px;
+			overflow: hidden;
+		}
+	}
+
+	&-title {
+		@extend %main-title;
+	}
+
+	&-text {
+		@extend %sub-title;
+		color: $sub-title;
+	}
+	
+	&-list {
+		font-size: 0;
+	}
+
+	&-item {
+		@extend %box-sizing;
+
+		font-size: 1rem;
+		vertical-align: top;
+		margin-bottom: 3em;
+		
+		@include mq(767) {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+
+		@include mq(992) {
+			display: inline-block;
+			width: 33.333%;
+		}
+	}
+
+	&-item:last-child {
+		margin-bottom: 0;
+	}
+
+	&-link {
+		color: $primary-text-color;
+		display: block;
+	}
+
+	&-img {
+		display: block;
+		width: 100%;
+
+		@include mq(992) {
+			position: absolute;
+			width: auto;
+			height: auto;
+			max-width: 500px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&-bottom{
+		@extend %box-shadow;
+	
+		padding: 1.3em 1em;
+	}
+
+	&-date {
+		opacity: 0.3;
+		font-size: 0.8em;
+	}
+
+	&-item-title {
+		margin-top: 1em;
+	}
+
+	&-item-text {
+		color: $secondary-text-color;
+		margin: 1.2em 0;
+	}
+
+	.details {
+		border-top: 1px solid rgba(0, 0, 0, 0.05);
+		padding-top: 1.3em;
+		@include clearfix;
+	}
+
+	.detail-icon {
+		float: left;
+		color: $secondary-text-color;
+	}
+	
+	.m-viewed {
+		margin-left: 0.5em;
+	}
+
+	.m-read, 
+	.m-download {
+		float: right;
+	}
+}
+
+.detail-icon > .recent-link {
+	color: $accent-color;
+}
+
+.detail-icon i {
+	margin-right: 0.5em;
+	vertical-align: middle;
+}
+
+.detail-icon.m-read i {
+	margin-left: 0.5em;
+}

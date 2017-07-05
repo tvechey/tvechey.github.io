@@ -1,0 +1,42 @@
+.about {
+	@extend %sections;
+	
+	&-title {
+		@extend %main-title;
+	}
+
+	&-text {
+		@extend %sub-title;
+		color: $sub-title;
+	}
+
+	&-history {
+
+		&-title {
+			@extend %main-title;
+		}
+
+		&-text {
+			@extend %sub-title;
+			color: $secondary-text-color;
+			width: 70%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 3em;
+		}
+
+		.history {
+			padding: 0 0.5em;
+			
+			@include mq(767) {
+				padding: 0 5em;
+			}
+
+			&-img {
+				display: block;
+				width: 100%;
+				border-radius: 2px;
+			}
+		}
+	}
+}

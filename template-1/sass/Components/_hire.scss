@@ -1,0 +1,26 @@
+.hire {
+	@extend %sections;
+
+	background-color: $accent-color;
+	color: $reverse-text-color;
+
+	&-title {
+		@extend %main-title;
+		text-transform: capitalize;
+	}
+
+	&-text {
+		@extend %sub-title;
+		opacity: 0.8;
+	}
+	&-btn-block {
+		text-align: center;
+	}
+
+	&-btn {
+		margin-bottom: 1em;
+		text-transform: uppercase;
+		display: inline-block;
+	}
+	
+}

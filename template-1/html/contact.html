@@ -1,0 +1,38 @@
+@@include('components/head.html')
+
+<body class="p-contact">
+
+	@@include('components/header.html')
+	
+	<div class="contact">
+		<div class="container">
+			<div class="heading">
+				<h2 class="contact-title">Contact us</h2>
+				<p class="contact-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+			</div>
+			<div class="contact-us-address">
+				<h3 class="contact-address-title">Our Address</h3>
+				<p class="contact-us-text"><i class="icon-location"></i>198 West 21th Street, Suite 721 New York NY 10016</p>
+				<p class="contact-us-text"><i class="icon-old-phone"></i>+ 1235 2355 98</p>
+				<p class="contact-us-text"><i class="icon-mail22"></i><a href="#" class="contact-link">info@yoursite.com</a></p>
+				<p class="contact-us-text"><i class="icon-globe2"></i><a href="#" class="contact-link">www.yoursite.com</a></p>
+			</div>
+			<div class="contact-us-form">
+				<form action="post" class="contact-form">
+					<input class="contact-input " type="text" placeholder="name" tabindex="1" required>
+					<input class="contact-input" type="email" placeholder="email" tabindex="2" required>
+					<textarea class="contact-input msg-field" name="Message field" id="" cols="30" rows="10" placeholder="message" tabindex="3" required></textarea>
+					<input class="btn btn-submit" type="submit" value="send message">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	@@include('components/hire-us.html')
+
+	@@include('components/footer.html')
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

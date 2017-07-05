@@ -1,0 +1,113 @@
+.header {
+	padding: 1.6em 1em;
+	position: relative;
+	z-index: 1;
+
+	&-logo {
+		float: left;
+		width: 20%;
+		
+		&-link{
+			color: $primary-text-color;
+			font-size: 1.7em;
+			text-transform: uppercase;
+			font-weight: 700;
+
+			span {
+				color: $accent-color;
+			}
+		}
+	}
+
+
+	&-nav-mobile {
+		cursor: pointer;
+		margin-right: 0.5rem;
+		position: fixed;
+		right: 1em;
+		top: 5px;
+		z-index: 2;
+
+		&:before {
+			content: "\2261"; 
+			font-size: 2em;
+			line-height: 2.5em;
+			display: inline-block;
+		}
+
+		@include mq(767) {
+			display: none;
+		}
+	}
+
+	&-nav-list {
+		display: none;
+		background: #000;
+		position: fixed;
+		right: 0;
+		top:0;
+		padding: 3em 2em 2em;
+		bottom: 0;
+
+		@include mq(767) {
+			display: block;
+			background: none;
+			float: right;
+			position: relative;
+			padding: 0;
+		}
+	}
+
+	&-nav-item {
+		
+		@include mq(767) {
+			float: left;
+		}
+	}
+
+	&-nav.is-opened:before {
+		background: $gray-base;
+		position: fixed;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0.75;
+
+		@include mq(767) {
+			display: none;
+		}
+	}
+
+	&-nav.is-opened	&-nav-list {
+		display: block;
+	}
+
+	&-nav.is-opened &-nav-mobile {
+		color: $white;
+	}
+
+	&-link {
+		display: block;
+		padding: 0.5em 1em;
+		line-height: 1.5;
+		color: $reverse-text-color;
+		opacity: .7;
+		transition: 0.5s;
+
+		&:hover {
+			opacity: 0.5;
+		}
+
+		@include mq(767) {
+			display: inline-block;
+			color: $gray-base;
+			opacity: 0.6;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}

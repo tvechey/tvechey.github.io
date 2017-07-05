@@ -1,0 +1,39 @@
+.banner {
+	margin-bottom: 1.6em;
+	text-align: center;
+	
+	&-text {
+		@extend %sub-title;
+	}
+
+	&-link {
+		color: $primary-link-color;
+		transition: all .5s;
+	}
+
+	&-buttons {
+		padding: 0 10%;
+	}
+	
+	&-btn {
+		display: block;
+		transition: all .5s;
+
+		&:hover {
+			box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) ;
+		}
+
+		@include mq(767) {
+			display: inline-block;
+		}
+	}
+
+	&-btn:first-child {
+		margin-bottom: 0.5em;
+
+		@include mq(767) {
+			margin-bottom: 0;
+		}
+	}
+}
+

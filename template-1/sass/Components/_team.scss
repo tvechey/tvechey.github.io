@@ -1,0 +1,66 @@
+.about-team {
+	@extend %sections;
+	
+	&-title {
+		@extend %main-title;
+	}
+
+	&-text {
+		@extend %sub-title;
+		color: $secondary-text-color;
+	}
+	.team {
+		font-size: 0;
+
+		&-item {
+			@extend %box-sizing;
+			@extend %box-shadow;
+
+			margin-bottom: 3em;
+			font-size: 1rem;
+			vertical-align: top;
+			text-align: center;
+
+			@include mq(767) {
+				padding-left: 1em;
+				padding-right: 1em;
+				margin-left: 1.5%;
+				margin-right: 1.5%;
+			}
+
+			@include mq(992) {
+				display: inline-block;
+				width: 30.333%;
+			}
+
+			&-img {
+				display: block;
+				width:150px;
+				height: 150px;
+				border-radius: 70%;
+				margin: 0 auto 2em;
+			}
+
+			&-name {
+				color: $secondary-text-color;
+				margin-bottom: 1em;
+				font-size: 1.2em;
+			}
+
+			&-job {
+				color: $sub-title;
+			}
+
+			&-text {
+				margin: 2em 0;
+				color: lighten($secondary-text-color, 22%);
+			}
+		}
+		
+		&-item:nth-child(4,5,6) {
+			@include mq(992) {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

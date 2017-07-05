@@ -1,0 +1,66 @@
+.slider {
+	@extend %sections;
+
+	background-color: $slider-background;
+
+	&-static {
+		color: $reverse-text-color;
+		text-align: left;
+		padding: 0 1em;
+
+		@include mq(992) {
+			float: left;
+			width: 50%;
+		}
+
+		&-title {
+			margin-bottom: 1em;
+		}
+
+		&-text {
+			margin-bottom: 3em;
+			line-height: 1.5;
+		}
+	}
+
+	&-flex {
+		position: relative;
+
+		&-inner {
+			margin: 0 auto;
+			position: absolute;
+			bottom: 100px;
+			background: $secondary-background;
+			border-radius: 10px;
+			box-shadow: 0px 21px 24px 0px rgba(0, 0, 0, 0.13);
+			padding: 2em;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80%;
+
+			@include mq(992) {
+				width: auto;
+			}
+
+			&-title,
+			&-text {
+				margin-bottom: 1em;
+			}
+
+			&-text {
+				display: none;
+				line-height: 1.5;
+				color: $secondary-text-color;
+
+				@include mq(767) {
+					display: block;
+				}
+			}
+		}
+	}
+
+
+	&-img {
+		width: 100%;
+	}
+}

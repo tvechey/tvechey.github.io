@@ -1,0 +1,105 @@
+.contact {
+	@extend %sections;
+	
+	&-title {
+		@extend %main-title;
+	}
+
+	&-text {
+		@extend %sub-title;
+		color: $sub-title;
+	}
+
+	&-link {
+		color: $primary-text-color;
+	}
+
+	&-us-address {
+		@extend %box-sizing;
+		margin-bottom: 2em;
+
+		@include mq(767) {
+			padding-left: 2em;
+			padding-right: 2em;
+			margin-bottom: 3em;
+		}
+
+		@include mq(992) {
+			float: left;
+			width: 30%;	
+			margin-bottom: 0;
+		}
+	}
+
+	&-address-title {
+		margin-bottom: 1em;
+	}
+
+	&-us-text {
+		margin-bottom: 1em;
+
+		& > i {
+			color: rgba(0, 0, 0, 0.3);
+			margin-right: 0.5em;
+			font-size: 1.2em;
+			vertical-align: text-top;
+		} 
+	}
+	
+	&-us-form {
+		@extend %box-sizing;
+		margin-bottom: 2em;
+
+		@include mq(767) {
+			padding-left: 2em;
+			padding-right: 2em;
+			margin-bottom: 3em;
+		}
+
+		@include mq(992) {
+			float: right;
+			width: 70%;
+			margin-bottom: 0;	
+		}
+	}
+
+	&-input {
+		border: 2px solid rgba(0, 0, 0, 0.1);
+		display: inline-block;
+		padding: 10px 20px;
+		border-radius: 4px;
+		margin-bottom: 1.2em;
+		text-transform: capitalize;
+		font-size: 1em;
+		font-family: inherit;
+		box-sizing: border-box;
+		line-height: 1.5em;
+		width: 100%;
+
+    	@include mq(767) {
+			width: 48.7%;
+		}
+
+		&:active,
+		&:focus {
+			outline: none;
+			border-color: #DD356E;
+		}
+	}
+	
+	&-input:first-child {
+		margin-right: 1%;
+	}
+
+	.msg-field {
+		display: block;
+		width: 100%;
+		resize: none;
+	}
+
+	.btn-submit {
+		border: none;
+		font-size: 0.85em;
+	}
+
+}
