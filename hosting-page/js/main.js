@@ -14,12 +14,12 @@
 			$(this)
 				.addClass('active')
 			    .siblings('dt').removeClass('active');
-	    	
-	    	$(window).scrollTop($(this).offset().top);
 
 			contentToShow
 				.addClass('active')
 			    .siblings('dd').removeClass('active');
+
+			$(window).scrollTop(contentToShow.offset().top);
 		}
 
 		$(tabs).css({'min-height': contentToShow.outerHeight()});
