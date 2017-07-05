@@ -1,0 +1,23 @@
+@mixin mq ($val, $dir: min) {
+	@if $dir == 'min' {
+		@media screen and (min-width: $val +px) {@content;}
+	} 
+	@else if $dir == 'max' {
+		@media screen and (max-width: ($val - 1) +px) {@content;}
+	}
+}
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin wrap {
+	@include clearfix;
+
+	width: 80%;
+	margin: 0 auto;
+}
