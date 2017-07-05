@@ -1,0 +1,62 @@
+.blog-calendar-wrap {
+	background: $primary-bg;
+}
+
+.blog-calendar-table {
+	font-family: Josefin Sans, sans-serif;
+	width: 100%;
+	border: 0;
+	box-sizing: border-box;
+
+	&-name {
+		color: $reverse-text-color;
+		background: $contact-us-bg;
+		text-align: right;
+		padding: .8em 1em;
+		box-sizing: border-box;
+	}
+	
+	&-row {
+		@include clearfix;
+	}
+
+	&-cell-title,
+	&-cell {
+		float: left;
+		width: 14.2857143%;
+	}
+	
+	&-head,
+	&-body,
+	&-footer {
+		padding:.5em;
+	}
+
+	&-active {
+		border: 1px solid $contacts-border;
+		box-sizing: border-box;
+	}
+
+	&-link {
+		display: inline-block;
+		color: $secondary-text-color;
+
+		&:before {
+			content: '\f100';
+			font-family: FontAwesome;
+			margin-right: 5px;
+		}
+	}
+
+	&-cell-title,
+	&-cell {
+		font-weight: 400;
+		font-size: .9em;
+		text-align: center;
+		padding: .5% 0;
+	}
+
+	&-footer &-cell{
+		padding-top: 1em;
+	}
+}

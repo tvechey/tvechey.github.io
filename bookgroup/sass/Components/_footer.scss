@@ -1,0 +1,134 @@
+.footer {
+	padding: 2.5em 1em 1em;
+	background: $footer-bg;
+	color: $footer-color;
+	font-family: Lato, sans-serif;
+	text-align: center;
+	
+	@include mq(543) {
+		text-align: left;
+	}
+	
+	@include mq(767) {
+		padding: 4em 1.5em 1em;
+	}
+
+	@include mq(981) {
+		padding: 5em 2em 1em;
+	}
+	
+	&-wrap {
+		@include clearfix;
+		margin-bottom: 2rem;
+	}
+
+	&-item {
+		box-sizing: border-box;
+		display: block; 
+		font-size: .9em;
+		line-height: 1.6em;
+		margin-top: 2.5em; 
+		padding: 0 1.5rem;
+
+		@include mq(543) {
+			float: left;
+			margin-top: 0;
+			width: 49%;
+		}
+
+		@include mq(767) {
+			float: left;
+			width: 25%;
+		}
+	}
+
+	&-item-2 {
+		@include mq(543) {
+			margin-right: 2%;
+		}
+
+		@include mq(767) {
+			margin-right: 0;
+		}
+	}
+
+	&-item-3,
+	&-item-4 {
+		@include mq(543) {
+			margin-top: 2.5em;
+		}
+
+		@include mq(767) {
+			margin-top: 0;
+		}
+	}
+	
+	&-link {
+		color: $footer-color;
+		display: inline-block;
+		transition: .3s all ease;
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+	
+	&-logo {
+		display: block;
+		width: 100%;
+	}
+	
+	&-list-item {
+		position: relative;
+		text-transform: capitalize;
+		word-break: break-all;
+		word-break: break-word;
+
+		&:before {
+			background: $secondary-link-color;
+			content: '';
+			height: 3px;
+			margin-left: -10px;
+			position: absolute;
+			top: 12px;
+			width: 3px;
+		}
+	}
+
+	&-site-info {
+		text-align: center;
+
+		&:before {
+			content: '';
+			background: darken($footer-color, 20%);
+			width: 100%;
+			height: 1px;
+			display: block;
+			margin-bottom: 2em;
+		}
+	}
+
+	&-site-info-wrap {
+		@include clearfix;
+
+		padding: 0 1%;
+	}
+
+	&-copyright {
+		font-size: .67em;
+		margin-bottom: 2rem;
+
+		@include mq(767) {
+			float: left;
+			margin-bottom: 0;
+		}
+	}
+
+	&-icons {
+		color: $secondary-link-color;
+
+		@include mq(767) {
+			float: right;
+		}
+	}
+}

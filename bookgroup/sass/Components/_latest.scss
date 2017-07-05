@@ -1,0 +1,171 @@
+.latest {
+	@extend %bg-main; 
+	@extend %sections;
+
+	&-title {
+		@extend %title;
+
+		color: $primary-title-color;
+		text-align: center;
+	}
+
+	&-wrap {
+		@include wrap;
+	}
+
+	&-item-1, 
+	&-item-2 {
+		@include mq(767) {
+			float: left;
+			margin-bottom: 1em;
+			width: 49%;
+		}
+
+		@include mq(992) {
+			margin-bottom: 0;
+		}
+	}
+
+	&-item-1 {
+		@include mq(767) {
+			margin-right: 2%;
+		}
+	}
+
+	&-item-3 {
+		@include mq(767) {
+			clear: both;
+			margin-top: 1em;
+			width: 100%;
+		}
+	}
+
+	&-item {
+		@extend %box-sizing;
+
+		background: $reverse-bg;
+		display: block; 
+		margin-top: 5em;
+
+		@include mq(767) {
+			margin-top: 0;
+		}
+
+		@include mq(992) {
+			float: left;
+			margin-left: 3.5%;
+			width: 31%;
+		}
+
+		&-title {
+			font-size: 1.25em;
+		}
+
+		&-link {
+			color: $primary-link-color;
+			display: block;
+			&:hover {
+				color: $secondary-link-color;
+			}
+		}
+
+		&-img-wrap {
+			margin-bottom: .5em;
+		}
+
+		&-img {
+			display: block;
+			width: 100%;
+		}
+		
+		&-text {
+			color: $primary-text-color;
+			font-family: Lato, sans-serif;
+			line-height: 1.5em;
+
+			@include mq(992) {
+				font-size: .9em;
+			}
+		}
+
+		&-details {
+			color: $accent-color;
+			font-size: .75em;
+			position: relative;
+
+			&:before {
+				background: #e4e4e4;
+				content: '';
+				height: 1px;
+				left: 50%;
+				position: absolute;
+				top: 0;
+				transform: translate(-50%);
+				width: 88%;
+			}
+		}
+
+		&-title,
+		&-text,
+		&-details {
+			box-sizing: border-box;
+			padding: 5% 8%;
+
+			@include mq(992) {
+				padding: 10% 5%;
+			}
+		}
+
+		&-post_by {
+
+		}
+
+		&-post_by > &-link {
+			color: $accent-color;
+			display: inline;
+			
+			&:hover {
+				color: $secondary-link-color;
+			}
+		}
+
+		&-date {
+			padding: 0 9%;
+		}
+
+		&-comments {
+			display: inline-block;
+		}
+
+	}
+
+	&-item-1 {
+		@include mq(992) {
+			margin: 0;
+		}
+	}
+
+	&-item-3 {
+		@include mq(992) {
+			clear: none;
+			margin-top: 0;
+		}
+	}
+	
+	&-btn-wrap {
+		clear: both;
+		text-align: center;
+	}
+
+	&-btn {
+		@extend .secondary-btn;
+
+		margin-top: 10%;
+		padding: 1em 2em;
+
+		&:hover {
+			background: 0;
+			color: $reverse-btn-color;
+		}
+	}
+}

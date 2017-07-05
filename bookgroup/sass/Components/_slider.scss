@@ -1,0 +1,80 @@
+.slider {
+	position: relative;
+	
+	.slick-dots {
+		bottom: 15px;
+	}
+
+	.slick-dotted.slick-slider {
+		margin-bottom: 0;
+	}
+
+	.slick-dots li button:before {
+		color: $primary-text-color;
+		font-size: 12px;
+		opacity: 0.8;
+	}
+
+	.slick-dots li.slick-active button:before {
+		color: $primary-btn-color;
+	}
+
+	.slick-dots li button:hover {
+		color: $primary-btn-color;
+	}
+
+	&-img {
+		display: block;	
+		min-height: 320px;
+		width: 100%;
+	}
+
+	&-slogan {
+		@extend %sections;
+
+		padding-left: 0.5em;
+		position: absolute;
+		top: 0;
+
+		@include mq(543) {
+			padding-left: 2.5em;
+		}		
+	}
+
+	&-title,
+	&-text {
+		color: $secondary-title-color;
+	}
+
+	&-title {	
+		font-size: 2em;
+		letter-spacing: .1em;
+		line-height: 1em;
+		margin-bottom: 1em;
+		text-transform: capitalize;
+
+		@include mq(543) {
+			font-size: 3.5em;
+			margin-bottom: 0.5em;
+		}
+
+		@include mq(767) {
+			font-size: 5em;
+			margin-bottom: 0.25em;
+		}
+	}
+
+	&-text {
+		font-family: Josefin Sans, sans-serif;
+		font-size: 1.5em;
+		margin-bottom: 1em;
+
+		@include mq(543) {
+			font-size: 2em;
+		}
+	}
+
+	&-link {
+		@extend .primary-btn;
+	}
+}

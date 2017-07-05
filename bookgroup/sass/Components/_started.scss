@@ -1,0 +1,69 @@
+.started {
+
+	&-b {
+		@extend %sections;
+		@extend %box-sizing;
+
+		padding: 5% 0 8% 8%;
+		position: relative;
+
+		@include mq(767) {
+			background: $secondary-bg;
+			left: 100%;
+			padding: 12% 0 12% 5%;
+		}
+
+	}
+
+	&-title {
+		font-size: 3em;
+		line-height: 1em;
+	}
+
+	&-text {
+		font-family: 'Josefin Sans', Helvetica, Arial, Lucida, sans-serif;
+		font-size: 2em;
+		margin-bottom: 1em;
+	}
+
+	&-title,
+	&-text {
+		font-weight: 300;
+	}
+
+	&-btn {
+		@extend .primary-btn;
+	}
+}
+
+.p-index .started {
+	@extend %bg-images;
+	@extend %sections;
+
+	background-image: url(../images/background-img2.jpg);
+	
+	@include mq(767) {
+		max-width: 50%;
+		padding: 0;
+	}
+}
+
+.p-about .started {
+	@extend %bg-images;
+	@extend %sections;
+
+	@include mq(543) {
+		background-image: url(../images/background-img4.jpg);
+		max-width: 50%;
+		padding: 0;
+	}
+	
+	&-b {
+		
+		@include mq(543) {
+			left: 100%;
+			padding: 15% 0 15% 5%;
+		}
+	}
+
+}

@@ -1,0 +1,122 @@
+.contacts {
+	@extend %sections;
+
+	&-contact {
+		margin-bottom: 2em;
+
+		@include mq(543) {
+			float: left;
+			width: 50%;
+		}
+	}
+
+	&-title {
+		@extend %title;
+
+		font-size: 2em;
+		font-weight: 300;
+
+		@include mq(767) {
+			font-size: 3em;
+		}
+	}
+
+	&-list {
+		font-family: 'Josefin Sans', Helvetica, Arial, Lucida, sans-serif;
+	}
+
+	&-item {
+		margin-bottom: .75em;
+		padding-left: 1em;
+		display: block;
+
+		&-title {
+			font-weight: 600;
+		}
+
+		&-text {
+			font-weight: 300;
+		}
+
+		&-title,
+		&-text {
+			color: $primary-text-color;
+		}
+	}
+
+	&-offer {
+		clear: both;
+		margin: 0 auto;
+		
+		&-wrap {
+			border: 1px solid $contacts-border;
+			padding: 1.5em 1em;
+		}
+
+		&-title {
+			font-size: 1em;
+			text-align: center;
+			margin-bottom: .5em;
+
+			@include mq(543) {
+				font-size: 2.5em;
+			}
+		}
+	}
+
+	&-connected {
+		background: $contact-us-bg;
+		color: $reverse-text-color;
+		padding: 5%;
+		overflow: hidden;
+
+		&-title {
+			display: inline-block;
+			font-size: 1em;
+		}
+
+		&-icons {
+			display: inline-block;
+
+			@include mq(375) {
+				float: right;
+			}
+
+			& > .soc-icons:hover {
+				color: $primary-link-color;
+			}
+		}
+	}
+
+	&-offer-title,
+	&-connected-title {
+		text-transform: capitalize;
+	}
+}
+.p-contacts,
+.p-blog {
+
+	.subscribe-form {
+		text-align: center;
+	}
+
+	.subscribe-input {
+		color: $primary-text-color;
+
+		@include placeholder {
+			text-transform: none;
+		}
+	}
+
+	.subscribe-form .input-standart,
+	.blog-search-form  .blog-search-input {
+		color: $primary-text-color;
+		border-color: lighten($border-color, 44.75%);
+		margin-bottom: 1em;
+
+		@include mq(403) {
+			margin-bottom: 0;
+		}
+	}
+}
+

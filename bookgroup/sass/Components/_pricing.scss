@@ -1,0 +1,69 @@
+.pricing {
+	@extend %sections;
+
+	&-title-list,
+	&-list {
+		@include clearfix;
+		
+	}
+
+	&-title-item {
+		@extend %title;
+		color: $primary-title-color;
+		font-family: 'Josefin Sans', sans-serif;
+		font-weight: 600;
+		font-size: 1.5em;
+	}
+
+	&-title-item:first-child {
+		float: left;
+	}
+
+	&-title-item:last-child {
+		float: right;
+	}
+
+	&-list {
+		width: 90%
+	}
+
+	&-title-list,
+	&-list {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	&-item {
+		border-bottom: 1px solid darken($secondary-border-color, 8.5%);
+		color: $primary-text-color;
+		text-transform: capitalize;
+		padding: 3px 0 10px;
+		font-family: Lato,sans-serif;
+		overflow: hidden;
+
+		@include mq(767) {
+			padding: 5px 0 12px;
+		}
+
+		&-desc {
+			float: left;
+			max-width: calc(100% - 100px);
+
+			@include mq(441) {
+				float: none;
+				max-width: none;
+			}
+		}
+	}
+
+	&-start {
+		color: $secondary-link-color;
+		text-transform: none;
+		float: right;
+		max-width: 80px;
+
+		@include mq(441) {
+			max-width: none;
+		}
+	}
+}

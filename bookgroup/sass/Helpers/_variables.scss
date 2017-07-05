@@ -1,0 +1,32 @@
+$base-font-size: 16px;
+
+%box-sizing {
+	box-sizing: border-box;
+}
+
+%bg-main {
+	background: $gray-super-light;
+}
+
+%bg-images {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+}
+
+%sections {
+	padding: 2.5em 0;
+	@include mq(767) {
+		padding: 4.5em 0;
+	}
+
+	@include mq(981) {
+		padding: 5.5em 0;
+	}
+}
+
+%title {
+	margin-bottom: 1.5em;
+	text-transform: capitalize;
+}

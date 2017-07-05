@@ -1,0 +1,87 @@
+@@include('components/head.html', {"title": "Blog"})
+<body class="p-blog">
+	@@include('components/header.html')
+
+	<div class="blog">
+		<div class="container">
+			<div class="blog-content">
+				<div class="blog-wrap">
+					@@include('components/blog-posts.html')
+					
+					<div class="blog-pagination">
+						<a href="#" class="blog-page-link blog-page-link-active">1</a>
+						<a href="#" class="blog-page-link">2</a>
+						<a href="#" class="blog-page-link"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="blog-aside">
+				<div class="blog-wrap">
+					<div class="blog-search">
+						<h3 class="blog-search-title blog-title">search</h3>
+						<form action="post" class="blog-search-form">
+							<input class="blog-search-input input-standart" type="search" placeholder="search">
+							<button class="blog-search-btn"></button>
+						</form>
+					</div>
+
+					@@include('components/offer-subscribe.html', {
+						"subscribe-title": "Subscribe",
+						"subscribe-text": "Subscribe to our newsletter and receive the latest tips and tricks, shared by some world-famous authors on our blog!",
+						"connected-title": "Follow us"
+					})
+
+				<div class="blog-latest blog-aside-item">
+					<h3 class="blog-latest-title blog-title">latest articles</h3>
+					<div class="blog-latest-item">
+						<span class="blog-latest-item-date">October 6, 2016</span>
+						<a href="#" class="blog-latest-item-link">Things to know about writing the first chapter of your novel</a>
+					</div>
+					<div class="blog-latest-item">
+						<span class="blog-latest-item-date">October 6, 2016</span>
+						<a href="#" class="blog-latest-item-link">Self-care for writers: some tips from bestsellers author!</a>
+					</div>
+					<div class="blog-latest-item">
+						<span class="blog-latest-item-date">October 6, 2016</span>
+						<a href="#" class="blog-latest-item-link">Begin reading Terry Roberts’ critically new novel</a>
+					</div>
+				</div>
+				<div class="blog-tags blog-aside-item">
+					<h3 class="blog-tags-title blog-title">tags</h3>
+					<div class="blog-tags-wrap">
+						<a href="#" class="blog-tags-link">author</a>
+						<a href="#" class="blog-tags-link">book</a>
+						<a href="#" class="blog-tags-link">chapter</a>
+						<a href="#" class="blog-tags-link">character</a>
+						<a href="#" class="blog-tags-link">novel</a>
+						<a href="#" class="blog-tags-link">page</a>
+						<a href="#" class="blog-tags-link">part</a>
+						<a href="#" class="blog-tags-link">review</a>
+						<a href="#" class="blog-tags-link">tips</a>
+					</div>
+				</div>
+				<div class="blog-archive blog-aside-item">
+					<h3 class="blog-archive-title blog-title">archive</h3>
+					<ul class="blog-archive-list">
+						<li class="blog-archive-item"><a href="#" class="blog-archive-item-link">october 2016</a></li>
+						<li class="blog-archive-item"><a href="#" class="blog-archive-item-link">may 2016</a></li>
+						<li class="blog-archive-item"><a href="#" class="blog-archive-item-link">april 2016</a></li>
+					</ul>
+				</div>
+				<div class="blog-calendar blog-aside-item">
+					<h3 class="blog-calendar-title blog-title">calendar</h3>
+
+					@@include('components/calendar.html')
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@@include('components/footer.html')
+
+@@include('components/scripts.html')
+
+</body>
+</html>

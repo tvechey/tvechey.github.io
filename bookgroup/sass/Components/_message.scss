@@ -1,0 +1,143 @@
+.message {
+	@extend %sections;
+
+	&-title {
+		@extend %title;
+
+		color: $secondary-title-color;
+		text-align: center;
+
+		&-lg {
+			font-weight: 300;
+			margin-bottom: 0.5em;
+
+			@include mq(767) {
+				font-size: 3em;
+			}
+		}
+
+		&-sm {
+			font-size: 1.8em;
+			font-weight: 300;
+			margin-bottom: 1.2em;
+
+			@include mq(767) {
+				font-size: 2em;
+			}
+		}
+	}
+
+	&-form-wrap {
+		margin: 0 auto;
+		padding: 0 1em;
+
+		@include mq(767) {
+			width: 70%;
+		}
+	}
+
+	&-input,
+	&-text {
+		border-left: none;
+		border-color: lighten($border-color, 44.75%);
+		border-right: none;
+		width: 100%;
+	}
+
+	&-input {
+		box-sizing: border-box;
+		margin-bottom: 1em;
+
+		@include mq(767) {
+			float: left;
+			margin-bottom: 3em;
+			width: 46%;
+		}
+	}
+
+	&-input:first-child {
+		@include mq(767) {
+			margin-right: 8%;
+		}
+	}
+
+	&-text {
+		clear: both;
+		display: block;
+		margin-bottom: 4em;
+	}
+
+	&-btn {
+		@extend .primary-btn;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.p-index .message {
+
+	&-title {
+		@extend %title;
+		color: $primary-title-color;
+	}
+
+	&-input,
+	&-text {
+		color: $primary-text-color;
+
+		@include placeholder {
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+.p-services .message {
+	@extend %bg-images;
+
+	background-image: url(../images/background-img5.jpg);
+
+	&-title {
+		@extend %title;
+		
+		color: $secondary-title-color;
+	}
+
+	&-input,
+	&-text {
+		color: $reverse-text-color;
+
+		@include placeholder {
+			text-transform: uppercase;
+		}
+	}
+
+	&-text {
+		min-height: 4rem;
+	}
+}
+
+.p-contacts .message {
+	@extend %bg-images;
+
+	background-image: url(../images/background-img5.jpg);
+
+	&-title {
+		@extend %title;
+		
+		color: $secondary-title-color;
+	}
+
+	&-input,
+	&-text {
+		color: $reverse-text-color;
+
+		@include placeholder {
+			text-transform: uppercase;
+		}
+	}
+
+	&-text {
+		min-height: 4rem;
+	}
+}

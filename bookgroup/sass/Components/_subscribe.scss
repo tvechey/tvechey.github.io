@@ -1,0 +1,52 @@
+.subscribe {
+	@extend %bg-images;
+	@extend %sections;
+	
+	background-image: url(../images/background-img1.jpg);
+	text-align: center;
+
+	&-title {
+		@extend %title;
+		
+		color: $secondary-title-color;
+	}
+
+	&-text {
+		color: $accent-color;
+		font-family: Lato, sans-serif;
+		margin-bottom: 3em;
+	}
+	
+	&-input {
+		border-left: none;
+		border-right: none;
+		margin-bottom: 1em;
+
+		@include placeholder {
+			text-transform: uppercase;
+		}
+		
+		@include mq(338) {
+			margin-bottom: 0;
+		}
+		@include mq(543) {
+			width: 30%;
+		}
+		@include mq(767) {
+			width: 25%;
+		}
+	}
+
+	&-btn {
+		@extend .primary-btn;
+
+		@include mq(331) {
+			margin-left: 0.5em;
+		}
+	}
+
+	&-input,
+	&-btn {
+		vertical-align: middle;
+	}
+}

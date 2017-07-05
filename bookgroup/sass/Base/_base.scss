@@ -1,0 +1,52 @@
+html {
+	@include base-font-size;
+}
+
+body {	
+	font-family: "PT Sans", sans-serif;
+	letter-spacing: .5px;
+	line-height: inherit;
+	margin: 0 auto;
+}
+
+input,
+button,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+
+.container {
+	@include clearfix;
+
+	margin: 0 auto;
+	max-width: 1280px;
+	padding-left: .5rem;
+	padding-right: .5rem;
+
+	@include mq(767) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+a {
+	text-decoration: none;
+	transition: .3s all ease;
+}
+
+.soc-icons {
+	display: inline-block;
+	padding: 0 10px;
+
+	&:hover {
+		color: $secondary-link-color;
+	}
+
+	.p-footer &:hover {
+		color: $footer-icons;
+	}
+}

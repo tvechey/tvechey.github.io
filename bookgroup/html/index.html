@@ -1,0 +1,52 @@
+@@include('components/head.html', {"title": "Home page"})
+
+<body class="p-index">
+
+	@@include('components/header.html')
+
+	<div class="slider">
+		<ul class="slider-list">
+			<li class="slider-item"><img src="images/slide1.jpg" alt="slider image here" class="slider-img"><div class="container">
+				<div class="slider-slogan">
+					<h2 class="slider-title">self-publishing</h2>
+					<p class="slider-text">can be your pathway to success!</p>
+					<a href="#" class="slider-link">read more</a>
+				</div>
+			</div>
+			</li>
+			<li class="slider-item"><img src="images/slide2.jpg" alt="slider image here" class="slider-img">
+			<div class="container">
+				<div class="slider-slogan">
+					<h2 class="slider-title">write your own success</h2>
+					<a href="#" class="slider-link">publish today</a>
+				</div>
+			</div>
+			</li>
+		</ul>
+	</div>
+	<div class="do-you-b">
+		<div class="container">
+			<img src="images/person.png" alt="Person logotype here" class="do-you-b-img">
+			<h3 class="do-you-b-title">Do you feel like the next Charles Dickens or Erik Larson?</h3>
+			<p class="do-you-b-text">Regardless of your writing being a fiction or a documentary work, we have a lot to offer,<br> so you can bring your manuscript to the public eye!</p>
+		</div>
+	</div>
+	@@include('components/services.html')
+
+	@@include('components/subscribe.html')
+
+	@@include('components/price-block.html')
+	
+	@@include('components/started.html')
+
+	@@include('components/authors.html', {"title": "Happy Authors"})
+
+	@@include('components/latest.html')
+
+	@@include('components/message.html')
+
+	@@include('components/footer.html')
+
+	@@include('components/scripts.html')
+</body>
+</html>

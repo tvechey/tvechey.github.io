@@ -1,0 +1,43 @@
+@@include('components/head.html', {"title": "Contacts"})
+<body class="p-contacts">
+	@@include('components/header.html')
+
+	@@include('components/message.html')
+
+	<div class="contacts">
+		<div class="container">
+			<div class="contacts-contact">
+				<h3 class="contacts-title">contacts</h3>
+				<ul class="contacts-list">
+					<li class="contacts-item">
+						<span class="contacts-item-title">Address:</span>
+						<span class="contacts-item-text">22 St. Black Road Raleigh</span>
+					</li>
+					<li class="contacts-item">
+						<span class="contacts-item-title">We are open:</span>
+						<span class="contacts-item-text">Mon – Sun, 24/7</span>
+					</li>
+					<li class="contacts-item">
+						<span class="contacts-item-title">Phone:</span>
+						<span class="contacts-item-text"> +1 800 559 6580</span>
+					</li>
+					<li class="contacts-item">
+						<span class="contacts-item-title">E-mail:</span>
+						<a href="#" class="contacts-item-text"> bookgroup@demolink.org</a>
+					</li>
+				</ul>
+			</div>
+
+			@@include('components/offer-subscribe.html', {
+				"subscribe-title": "get our special offers",
+				"subscribe-text": "",
+				"connected-title":"let's stay connected"
+			})
+		</div>
+	</div>
+
+	@@include('components/footer.html')
+
+	@@include('components/scripts.html')
+</body>
+</html>

@@ -1,0 +1,24 @@
+.pricing-banner {
+	@extend %bg-images; 
+	@extend %sections;
+
+	background-image: url(../images/background-img6.jpg);
+	min-height: 100px;
+
+	&-title {
+		color: $secondary-title-color;
+		text-transform: capitalize;
+		text-align: center;
+		padding: 55px;
+
+		@include mq(767) {
+			font-size: 3.5em;
+			margin-bottom: .65em;
+		}
+
+		@include mq(992) {
+			font-size: 5em;
+			margin-bottom: .3em;
+		}
+	}
+}

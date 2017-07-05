@@ -1,0 +1,83 @@
+.services {
+	@extend %bg-main; 
+	@extend %sections;
+	@include clearfix;
+}
+
+.s-item {
+	background: #fff;	
+	margin: 0 auto 3em;
+	position: relative;
+
+	@extend %box-sizing;
+	
+	@include mq(543) {
+		float: left;
+		margin-left: 2%;
+		width: 49%;
+	}
+
+	&:nth-child(1),
+	&:nth-child(3),
+	&:nth-child(5) {
+		@include mq(543) {
+			margin-left: 0;
+		}
+	}
+
+	@include mq(767) {
+		margin-left: 5%;
+		width: 30%;
+	}
+
+	&:nth-child(1),
+	&:nth-child(4) {
+		@include mq(767) {
+			margin-left: 0;
+		}
+	}
+
+	&:nth-child(3),
+	&:nth-child(5) {
+		@include mq(767) {
+			margin-left: 5%;
+		}
+	}
+
+	&:hover &-b-img:after {
+		background: rgba(149,119,194,0.5);
+		content: '';
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	&:hover &-link {
+		color: $secondary-link-color;
+	}
+
+	&-b-img {
+		position: relative;	
+	}
+
+	&-img {
+		display: block;
+		width: 100%;
+	}
+
+	&-b-content {
+		background: $white;
+		padding: 1em;
+		text-align: center;
+	}
+
+	&-title {
+		text-transform: capitalize;
+	}
+
+	&-link {
+		color: $secondary-text-color;
+		display: inline-block;
+	}
+}

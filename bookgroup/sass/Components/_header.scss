@@ -1,0 +1,349 @@
+.header {
+	@include clearfix;
+}
+
+.h-top {
+	background: $primary-bg;
+	color: $gray-middle;
+	font-family: Lato,sans-serif;
+	padding: 1rem 0;
+	text-align: center;
+
+	&-icons {
+		@include mq(543) {
+			float: left;
+		}
+	}
+
+	&-info {
+		@include mq(543) {
+			float: left;
+			width: 77%;
+		}
+
+		@include mq(695) {
+			text-align: left;
+			width: 80%;
+		}
+
+		@include mq(1268) {
+			float: none;
+			width: auto;
+		}
+
+		&-text {
+			font-size: 0.7em;
+			line-height: 1.85;
+
+			@include mq(543) {
+				float: left;
+				margin: 0 15px;
+			}
+			
+			@include mq(695) {
+				display: inline-block;
+				float: none;
+				margin: 0;
+			}
+		}
+
+		&-text:nth-child(1) {
+			@include mq(1268) {
+				float: left;
+				margin-left: 2%;	
+			}
+		}
+
+		&-text:nth-child(2) {
+			@include mq(543) {
+				float: right;
+			}
+
+			@include mq(695) {
+				margin: 0 1em;
+			}
+
+			@include mq(838) {
+				float: none;
+			}
+
+			@include mq(1268) {
+				float: left;
+				margin-left: 37%;	
+				margin-right: 0;	
+			}
+		}
+
+		&-text:nth-child(3) {
+			@include mq(1268) {
+				float: right;	
+			}
+		}
+	}
+
+	&-link {
+		color: $primary-link-color;
+		display: inline-block;
+		font-weight: 700;
+
+		&:hover {
+			color: $secondary-link-color;
+		}
+	}
+}
+
+.h-logo {
+	@include clearfix;
+	@extend %box-sizing;
+
+	line-height: 54px;
+	padding: 1rem 0;
+
+	@include mq(767) {
+		height: auto;
+		line-height: normal;
+		padding: 3rem 0;
+	}
+
+	&-b {
+		float: left;
+		max-width: 80%;
+
+		@include mq(767) {
+			float: none;
+			text-align: center;
+			max-width: 100%;
+		}
+	}
+
+	&-link {
+		display: inline-block;
+	}
+
+	&-img {
+		vertical-align: middle;
+		max-width: 100%;
+	}
+}
+
+.h-nav-m {
+	float: right;
+
+	@include mq(767) {
+		display: none;
+	}
+
+	&-icon {
+		display: inline-block;
+		font-size: 1.25em;
+	}
+	
+	&-icon:hover .h-nav-list {
+		display: block;
+	}
+}
+
+.h-nav {
+	font-family: Josefin Sans, sans-serif;
+	font-weight: 600;
+
+	@include mq(767) {
+		margin-bottom: 2em;
+	}
+	
+	&.open &-list {
+		background: $primary-bg;
+		display: block;
+		margin: 0 -.5rem;
+	}
+
+	&-list {
+		display: none;
+		position: relative;
+		text-align: center;
+
+		@include mq(767) {
+			display: block;
+		}
+	}
+
+	&-item {
+		display: block;
+		position: relative;
+		text-align: left;
+
+		@include mq(767) {
+			display: inline-block;		
+
+			&:after,
+			&:before {
+				border-top: 1px solid $secondary-link-color;
+				content: '';
+				position: absolute;
+				width: 0;
+				transition: width .3s linear;
+			}
+
+			&:hover:after,
+			&:hover:before {
+				width: calc(100% - 3em);
+			}
+
+			&:after {
+				left: 1.5em;
+				bottom: 3px;
+			}
+
+			&:before {
+				right: 1.5em;
+				top: 3px;
+			}
+		}
+	}
+
+	&-item > &-link > .fa {
+		@include mq(767) {
+			display: none;
+		}
+	}
+
+	&-submenu_link > .is-hide {
+		@include mq(767) {
+			display: none;
+		}
+	}
+
+	&-submenu_link > .is-hide {
+		@include mq(767) {
+			display: none;
+		}
+	}
+
+	&-link > .fa,
+	&-submenu_link > .fa {
+		float: right;
+	}
+
+	&-submenu_link > .fa {
+		@include mq(767) {
+			position: absolute;
+			right: 10px;
+			top: 18px;
+			transform: rotate(-90deg);
+			-webkit-transform: rotate(-90deg);
+		}
+	}
+	
+	&-link,
+	&-submenu_link {
+		& > .is-hide {
+			display: none;
+		}
+	}
+	
+	&-link.open,
+	&-submenu_link.open {
+		& > .is-hide {
+			display: block;
+		}
+
+		& > .is-show {
+			display: none;
+		}
+	}
+	
+	&-item.open &-link {
+		border-top: 1px solid #ccc;
+		background: $additional-bg;
+	}
+	
+	&-item.open > &-submenu {
+		border-bottom: 1px solid #dadada;
+	}
+
+	&-item.open > &-submenu,
+	&-submenu_item.open > &-submenu {		
+		display: block;
+	}
+
+
+	&-link {
+		color: $primary-text-color;
+		display: block;
+		padding: 1em 1.5em;
+		text-transform: capitalize;
+		transition: none;
+
+		&:hover {
+			color: $secondary-link-color;
+		}
+	}
+
+	&-submenu {
+		background: $additional-bg;
+		display: none;
+		z-index: 100;
+		min-width: 200px;
+
+		@include mq(767) {
+			position: absolute;
+			background: $reverse-btn-bg;
+		}
+	}
+
+	&-submenu &-submenu {
+		@include mq(767) {
+			background: 0;
+			display: none;
+			left: 100%;
+			margin-top: -1px;
+			padding-left: 4px;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 100;
+		}
+	}
+
+
+	&-submenu_list {
+		padding: 0 20px;
+		@include mq(767) {
+			padding: 0;
+			background: $reverse-btn-bg;
+			border: 1px solid $accent-color;
+		}
+	}
+
+	&-submenu_item {
+		text-align: left;
+		transition: .5s all ease;
+	}
+
+	&-submenu_item + &-submenu_item {
+		@include mq(767) {
+			border-top: 1px solid lighten($border-color, 30.5%);
+		}
+	}
+	
+	&-submenu_item.open > &-submenu_link,
+	&-submenu_item:hover > &-submenu_link {
+		color: $primary-link-color;
+	}
+
+	&-submenu_link {
+		@extend %box-sizing;
+
+		color: $secondary-link-color;
+		position: relative;
+		display: block;
+		padding: 0.8em 1.6em;
+	}
+
+	&-item:hover > &-submenu,
+	&-submenu_item:hover > &-submenu {
+		@include mq(767) {
+			display:block;
+		}
+	}
+}

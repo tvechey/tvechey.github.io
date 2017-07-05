@@ -1,0 +1,42 @@
+.self-publishing {
+	@extend %bg-images; 
+	@extend %sections;
+
+	background-image: url('../images/background-img3.jpg');
+	text-align: center;
+
+	@include mq(767) {
+		padding: 200px 0;
+	}
+	
+
+	&-title {
+		font-size: 2.5em;
+		margin-bottom: .8em;
+		text-transform: capitalize;
+
+		@include mq(767) {
+			font-size: 3.5em;
+			margin-bottom: .65em;
+		}
+
+		@include mq(992) {
+			font-size: 5em;
+			margin-bottom: .3em;
+		}
+	}
+
+	&-text {
+		margin-bottom: 2em;
+
+		@include mq(767) {
+			font-size: 1.75em;
+			margin-bottom: 1.25em;
+		}
+	}
+
+	&-title,
+	&-text {
+		color: $secondary-title-color;
+	}
+}

@@ -1,0 +1,132 @@
+.price-b {
+	@extend %sections;
+
+	&-title {
+		@extend %title;
+	}
+
+	&-title,
+	&-item-title {
+		color: $primary-title-color;
+		text-align: center;
+	}
+
+	&-wrap {
+		text-align: center;
+
+		@include mq (400) {
+			@include wrap;
+		}
+	}
+
+	&-item {
+		@extend %box-sizing;
+
+		background: $secondary-bg;
+		margin-bottom: 1em;
+		padding: 1rem 0.5rem;
+
+		@include mq(543) {
+			float: left;
+			margin-left: 2%;
+			padding: 1rem 1.5rem;
+			width: 49%;
+		}
+
+		&:nth-child(1),
+		&:nth-child(3) {
+			margin-left: 0;
+		}
+
+		@include mq(992) {
+			margin-left: 4%;
+			width: 22%;
+		}
+
+		&:nth-child(3) {
+			@include mq(992) {
+				margin-left: 4%;
+			}
+		}
+		
+		&-title {
+			font-size: 1.3em;
+			margin-bottom: 1em;
+			text-transform: uppercase;
+			word-wrap: break-word;
+
+			&:before {
+				background: #c2c2c2;
+				bottom: -13px;
+				content: '';
+				height: 1px;
+				left: 50%;
+				position: absolute;
+				transform: translate(-50%);
+				width: 122px;
+			}
+
+			&:after {
+				background: #c2c2c2;
+				bottom: -17px;
+				content: '';
+				height: 1px;
+				left: 50%;
+				position: absolute;
+				transform: translate(-50%);
+				width: 60px;
+			}
+		}
+
+		&-from,
+		&-for {
+			margin-bottom: 1rem;
+		}
+
+		&-for {
+			margin-top: 1rem;
+		}
+		
+		&-sign {
+			font-size: 1.2em;
+			vertical-align: top;
+		}
+
+		&-value {
+			font-size: 3em;
+			margin-bottom: 2rem;
+		}
+
+		&-desc {
+			font-family: 'Josefin Sans', Helvetica, Arial, Lucida, sans-serif;
+		}
+
+		&-value,
+		&-sign {
+			color: $secondary-text-color;
+			font-weight: 700;
+			line-height: 1em;
+		}
+		
+		&-from,
+		&-for,
+		&-desc {
+			color: $primary-text-color;
+		}
+
+	}
+
+	&-top {
+		margin: 1em 0;
+		position: relative;
+	}
+
+	&-center,
+	&-bottom {
+		margin-bottom: 1em;
+	}
+
+	&-btn {
+		@extend .secondary-btn;
+	}
+}

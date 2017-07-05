@@ -1,0 +1,45 @@
+.contact-us {
+	@extend %sections;
+
+	background: $contact-us-bg;
+	color: $reverse-text-color;
+	text-align: center;
+	
+	&-wrap {
+		@include wrap;
+		padding: 5% 0;
+	}
+
+	&-title {
+		@include mq(767) {
+			font-size: 3em;
+		}
+	}
+
+	&-text {
+		font-size: 1.2em;
+
+		@include mq(767) {
+			font-size: 1.5em;
+		}
+	}
+
+	&-title,
+	&-text {
+		margin-bottom: 1em;
+	}
+
+	&-btn {
+		@extend .btn;
+
+		background: transparent;
+		border-color: $contact-border-color;
+		color: $primary-btn-color;
+		padding: 1em 3.3em;
+
+		&:hover {
+			border-color: $secondary-btn-color;
+			color: $secondary-btn-color;
+		}
+	}
+}
