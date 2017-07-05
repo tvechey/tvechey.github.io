@@ -1,0 +1,23 @@
+.section-1 {
+	@extend %sections;
+
+	background: $third-bg;
+}
+.section-2 {
+	@extend %sections;
+}
+.section-3 {
+	@extend %sections;
+
+	background: $fourth-bg;
+}
+.section-4 {
+
+	padding: 1.5rem 0;
+
+	@include mq(600) {
+		padding: 2.5rem 0;
+	}
+
+	background: $primary-bg;
+}

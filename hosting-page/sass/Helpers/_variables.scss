@@ -1,0 +1,23 @@
+$base-font-size: 16px;
+
+%box-sizing {
+	box-sizing: border-box;
+}
+
+
+%sections {
+	padding: 1.5rem 0;
+
+	@include mq(600) {
+		padding: 2.5rem 0;
+	}
+
+	@include mq(768) {
+		padding: 3.5rem 0;
+	}
+
+	@include mq(1280) {
+		padding: 4.5rem 0;
+	}
+}
+

@@ -1,0 +1,118 @@
+.pricing {
+	@include clearfix;
+
+	margin-bottom: 3rem;
+
+	&-item {
+		max-width: 450px;
+		margin-left: auto;
+		margin-right: auto;
+		background: $reverse-bg;
+		border-radius: 3px;
+		box-sizing: border-box;
+		margin-bottom: 1em;
+
+		@include mq(768) {
+			float: left;
+			width: 31%;
+
+			&:nth-child(2) {
+				margin: 0 3.5%;
+			}
+		}
+	}
+
+	&-item_head {
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		box-sizing: border-box;
+		min-height: 140px;
+		padding: 20px 25px 10px 20px;
+		position: relative;
+	}
+
+	&-item_title {
+		color: $reverse-title-color;
+		font-size: 1.8em;
+		line-height: 1em;
+		min-height: 1.5em;
+		
+		@include mq(768) {
+			min-height: 2em;
+		}
+	}
+
+	&-item_price {
+		color: $reverse-title-color;
+		font-size: 1.3em;
+
+		em {
+			display: block;
+			color: $third-title-color;
+			font-size: 1.65em;
+			line-height: 1.5;
+		}
+
+		span {
+			color: $reverse-title-color;
+			font-size: .5em;
+		}
+	}
+
+	&-item_body {
+		padding: 20px 0 16px 20px;
+	}
+	
+	&-item_body,
+	&-item_footer {
+		padding-left: 20px;
+	}
+
+	&-item_list {
+		color: $main-text-color;
+	}
+
+	&-item_feature + &-item_feature{
+		margin-top: 1em;
+	}
+
+	&-item_footer {
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		margin-top: 1em;
+		padding: 0 20px 30px;
+	}
+
+	&-item_btn {
+		
+	}
+}
+
+.item-reseller {
+	background: $item-reseller;
+	color: $main-title-color;
+}
+
+.item-vps_hosting {
+	background: $item-vps_hosting;
+}
+
+.item-dedicatet_hosting {
+	background: $item-dedicatet_hosting;
+}
+
+.item-reseller  .pricing-item_title {
+	color: $main-title-color;
+}
+
+.item-reseller .pricing-item_price {
+	color: $secondary-title-color;
+	
+	em {
+		color:  $secondary-title-color;
+	}
+	
+	& span {
+		color:  $secondary-title-color;
+	}
+}

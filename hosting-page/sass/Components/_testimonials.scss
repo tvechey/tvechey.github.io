@@ -1,0 +1,49 @@
+.testimonials {
+	&-item {
+		@include mq(768) {
+			float: left;
+			width: 32%;
+
+			&:nth-child(2) {
+				margin: 0 2%;
+			}
+		}
+
+		&_img-block {
+			margin-bottom: 2em;
+		}
+
+		&_img {
+			border-radius: 50%;
+			box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.29);
+			display: block;
+		}
+
+		&_bloquote {
+			color: $reverse-text-color;
+			font-size: 1.4em;	
+			line-height: 1.4;
+			
+			&:before {
+				color: $third-title-color;
+				content: '\f10d';
+				font-family: FontAwesome;
+				font-size: 26px;
+				margin-right: 15px;
+			}
+		}
+
+		&_sign {
+			color: $third-title-color;
+			margin-top: 2em;
+		}
+	}
+
+	&-item + &-item {
+		margin-top: 2em;
+		
+		@include mq(768) {
+			margin-top: 0;
+		}
+	}
+}

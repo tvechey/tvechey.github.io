@@ -1,0 +1,77 @@
+.subscribe {
+	&-title {
+		color: $main-title-color;
+		display: block;
+		font-size: 2em;
+		margin-bottom: 2rem;
+		text-transform: capitalize;
+
+		@include mq(1200) {
+			display: inline-block;
+			margin-bottom: 0;
+			margin-right: 1em;
+		}
+	}
+	
+	&-form_wrap {
+		margin-bottom: 2em;
+
+		@include mq(1200) {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+	}
+
+	&-form {
+		@include mq(1200) {
+			display: inline;
+		}
+	}
+
+	&-input {
+		border-radius: 3px;
+		border: none;
+		box-sizing: border-box;
+		display: block;
+		margin-bottom: 2em;
+		outline: none;
+		padding: 20.25px 22px;
+		vertical-align: baseline;
+		width: 100%;
+
+		@include placeholder {
+			color: $main-text-color;
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 26px;
+		}
+
+		@include mq(980) {
+			display: inline-block;
+			margin-bottom: 0;
+			width: 80%;
+		}
+
+		@include mq(1200) {
+			width: 740px;
+		}
+
+		@include mq(1280) {
+			width: 810px;
+		}
+	}
+
+	&-btn {
+		display: inline-block;
+	}
+
+	&-text {
+		color: $secondary-title-color;
+		font-size: .9em;
+		line-height: 1.5;
+
+		@include mq(1200) {
+			margin-top: 30px;
+		}
+	}
+}

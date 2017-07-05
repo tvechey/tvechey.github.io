@@ -1,0 +1,176 @@
+.header {
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background: url(../images/header-bg.jpg);
+	padding: 1.5rem 0 2.5rem;
+
+	@include mq(768) {
+		background-position: center;
+		padding: 2.5rem 0 4rem;
+	}
+
+	&-logo {
+		line-height: 2em;
+		margin-bottom: 1rem;
+
+		&_link {
+			color: #ffffff;
+			display: inline-block;
+			font-size: 2em;
+			font-weight: 900;
+			text-transform: uppercase;
+			vertical-align: baseline;
+		}
+
+		&_img {
+			vertical-align: text-top;
+		}
+
+		&_title {
+			display: inline-block;
+		}
+	}
+
+	&-content {
+		@include clearfix;
+	}
+
+	&-promo {
+
+		@include mq(768) {
+			float: left;
+			width: 70%;
+		}
+
+		&_title,
+		&_subtitle {
+			color: $third-title-color;
+		}
+
+		&_title {
+			font-size: 2.5em;
+			line-height: 1.3;
+
+			@include mq(768) {
+				font-size: 3.5em;
+			}
+
+			@include mq(1280) {
+				font-size: 4em;
+			}
+
+		}
+		
+		&_subtitle {
+			font-size: 1.5em;
+			margin-top: 1rem;
+
+			@include mq(768) {
+				font-size: 2.2em;
+			}
+
+			@include mq(1280) {
+				font-size: 2.7em;
+			}
+		}
+
+		&_features {
+			margin-top: .5rem;
+
+			@include mq(768) {
+				float: left;
+				margin-top: 1.5rem;
+				width: 35%;
+
+				&:last-child {
+					margin-left: 1.5rem;
+				}
+			}
+		}
+
+		&_item {
+			color: $reverse-text-color;
+			line-height: 2;
+			padding: 4px 0 0 40px;
+			position: relative;
+
+			@include mq(768) {
+				line-height: normal;
+				padding: 4px 0 10px 40px;
+			}
+			&:before {
+				background: $primary-bg;
+				border-radius: 2px;
+				box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.12);
+				color: #009587;
+				content: '\f00c';
+				font-family: FontAwesome;
+				height: 24px;
+				left: 0;
+				line-height: 24px;
+				position: absolute;
+				text-align: center;
+				width: 24px;
+			}
+		}
+	}
+
+	&-action {
+		margin-top: 1em;
+
+		@include mq(768) {
+			float: right;
+			margin-top: 0;
+			width: 30%;
+		}
+
+		&_text {
+			color: $reverse-text-color;
+			font-size: 2em;
+			text-align: right;
+
+			@include mq(980) {
+				font-size: 2.5em;
+			}
+
+			@include mq(1280) {
+				font-size: 3em;
+			}
+
+			& em {
+				display: block;
+				font-size: 2em;
+				text-align: right;
+			}
+
+			& span {
+				float: right;
+				font-size: .5em;
+			}
+		}
+
+		&_btn {
+			background: $primary-bg;
+			border-radius: 3px;
+			box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.29);
+			clear: both;
+			color: $main-title-color;
+			display: block;
+			font-size: 1.7em;
+			margin: 1.5em auto 0;
+			padding: .5em 0;
+			text-align: center;
+			width: 75%;
+
+			@include mq(768) {
+				width: 100%;
+			}
+
+			&:hover {
+				background: $secondary-bg;
+				color: $reverse-title-color;
+			}
+		}
+	}
+}
